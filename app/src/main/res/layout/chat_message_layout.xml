@@ -7,19 +7,18 @@
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view_inner"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="7dp"
-        android:padding="25dp"
+        android:layout_width="@dimen/profile_dime"
+        android:layout_height="@dimen/profile_dime"
+        android:layout_marginTop="5dp"
         card_view:cardBackgroundColor="@color/chatbox"
-        card_view:cardCornerRadius="30dp"
+        card_view:cardCornerRadius="@dimen/image_radius"
         card_view:cardElevation="2dp">
 
         <ImageView
             android:id="@+id/profile_pic"
             android:contentDescription="Profile_pictures"
-            android:layout_width="60dp"
-            android:layout_height="60dp" />
+            android:layout_width="@dimen/profile_dime"
+            android:layout_height="@dimen/profile_dime" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"

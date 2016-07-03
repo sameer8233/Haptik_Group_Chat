@@ -4,4 +4,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="appbar_padding_top">1dp</dimen>
     <dimen name="chat_text_size">15sp</dimen>
+    <dimen name="chat_window_gap">15dp</dimen>
+    <dimen name="profile_dime">60dp</dimen>
+    <dimen name="image_radius">30dp</dimen>
+    <dimen name="chat_box_radius">5dp</dimen>
 </resources>
