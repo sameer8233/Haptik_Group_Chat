@@ -21,6 +21,7 @@ import java.util.HashMap;
 /**
  * Created by Sameer on 7/2/2016.
  */
+
 public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private ArrayList<Message> chatMessageList = new ArrayList<>();

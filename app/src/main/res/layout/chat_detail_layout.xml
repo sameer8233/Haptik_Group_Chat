@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/textcolor"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/textcolor"
                 android:textSize="14sp" />
 
             <TextView
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/cardview_light_background"
+                android:textColor="@color/textcolor"
                 android:textSize="14sp"/>
 
 
