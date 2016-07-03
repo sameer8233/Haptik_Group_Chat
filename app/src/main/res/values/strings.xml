@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Haptik_Test</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">Haptik Group Chat</string>
+    <string name="send_button_text">Send</string>
+    <string name="hint">Type your message..</string>
+</resources>
