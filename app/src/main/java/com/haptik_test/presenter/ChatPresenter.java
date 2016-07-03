@@ -22,7 +22,8 @@ public class ChatPresenter {
     private ArrayList<Message> items;
     private ConnectionDetector connectionDetector;
 
-    private void getdata() {
+    // API calling
+    private void getData() {
 
         if (connectionDetector.isConnectedToInternet()) {
             final ProgressDialog d = Dialogs.showLoading(view.getActivity());
@@ -31,6 +32,7 @@ public class ChatPresenter {
                 @Override
                 public void success(ChatMessages basePojo, Response response) {
                     if (basePojo != null) {
+                        // setting response to list
                         items = (ArrayList<Message>) basePojo.getMessages();
                         publish(view);
                     } else {
@@ -54,9 +56,11 @@ public class ChatPresenter {
     public void onTakeView(ChatFragment view) {
         this.view = view;
         connectionDetector = new ConnectionDetector(view.getActivity());
-        getdata();
+        // API Call
+        getData();
     }
 
+    // sending data to chat fragment
     public void publish(ChatFragment view) {
         if (view != null) {
             if (items != null) {

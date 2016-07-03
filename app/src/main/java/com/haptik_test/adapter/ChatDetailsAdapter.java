@@ -23,9 +23,11 @@ public class ChatDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private Context mContext;
     private String[] mHashMapKeys;
 
-    public void setSummaryHashMap(Context context, HashMap<String, ArrayList<Message>> hashMap) {
+    //getting data from chat detail fragment
+    public void setChatDetailHashMap(Context context, HashMap<String, ArrayList<Message>> hashMap) {
         mContext = context;
         chatdetailsHashMap = hashMap;
+        //setting keys(list) of hashmap into staring array.
         mHashMapKeys = chatdetailsHashMap.keySet().toArray(new String[hashMap.size()]);
 
     }
@@ -80,7 +82,7 @@ public class ChatDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         else
             ((TextViewHolder) holder).profile_pic.setBackgroundResource(R.drawable.default_pic);
 
-
+        // counting favourite messages
         int favCount = 0;
         for (int i = 0; i < messageList.size(); i++) {
             if (messageList.get(i).getIsFavorite())

@@ -10,6 +10,7 @@ import retrofit.http.GET;
 
 public interface Api {
 
+    //get chat messages
     @GET("/test_data/")
     void getChat(Callback<ChatMessages> callback);
 

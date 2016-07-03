@@ -44,8 +44,10 @@ public class MainActivity extends AppCompatActivity implements ChatAdapter.onUpd
         return true;
     }
 
+    //getting data from chat adapter (chat fragment)
     @Override
     public void updateChatDetails(HashMap<String, ArrayList<Message>> hashMap) {
+        //sending data to chat details fragment
         ChatDetailFragment chatDetailFragment = (ChatDetailFragment) getSupportFragmentManager().getFragments().get(1);
         chatDetailFragment.updateChatDetails(hashMap);
     }

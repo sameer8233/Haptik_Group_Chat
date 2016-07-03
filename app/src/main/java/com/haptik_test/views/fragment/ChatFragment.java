@@ -57,12 +57,17 @@ public class ChatFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         chatRecyclerView.setLayoutManager(llm);
         chatRecyclerView.setHasFixedSize(true);
-
         chatRecyclerView.setAdapter(chatAdapter);
+
+
         if (presenter == null) {
+           //call one time to get data from server.
             presenter = new ChatPresenter();
             presenter.onTakeView(this);
         } else {
+            // in case of screen is rotation this method called.
+            // getting data from presenter.
+            // NO API HIT TO SERVER.
             presenter.publish(this);
 
         }
@@ -81,9 +86,10 @@ public class ChatFragment extends Fragment {
     }
 
 
+    // getting data from presenter.
     public void onItemNext(ArrayList<Message> items) {
+        //setting data to chat adapter
         chatAdapter.setMessageList(items);
         chatAdapter.notifyDataSetChanged();
-
     }
 }

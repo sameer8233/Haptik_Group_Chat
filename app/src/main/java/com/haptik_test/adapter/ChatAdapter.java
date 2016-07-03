@@ -113,6 +113,8 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     ((TextViewHolder) holder).favourite.setBackgroundResource(android.R.drawable.btn_star_big_on);
                     Toast.makeText(mContext, Constants.FAVOURITE_ADDED, Toast.LENGTH_LONG).show();
                 }
+
+                //chat detail fragment will update at every click
                 mCallback.updateChatDetails(userChatDetail);
             }
         });

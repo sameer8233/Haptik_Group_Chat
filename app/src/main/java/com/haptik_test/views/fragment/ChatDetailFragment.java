@@ -66,11 +66,12 @@ public class ChatDetailFragment extends Fragment implements ChatAdapter.onUpdate
         return rootView;
     }
 
-
+//getting data from mainActivity
     @Override
     public void updateChatDetails(HashMap<String, ArrayList<Message>> hashMap) {
         chatdetailsHashMap = hashMap;
-        chatDetailsAdapter.setSummaryHashMap(mContext, chatdetailsHashMap);
+        // sending data to chat detail adapter.
+        chatDetailsAdapter.setChatDetailHashMap(mContext, chatdetailsHashMap);
         chatDetailsAdapter.notifyDataSetChanged();
     }
 
